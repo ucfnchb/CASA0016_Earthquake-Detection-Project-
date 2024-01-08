@@ -58,9 +58,6 @@ In final sketch, these libraries work together to create a system likely intende
 2. Adafruit NeoPixel Stick: This is an 8-LED RGB strip, each LED of which can be controlled individually with the Adafruit NeoPixel library. In this code, the setNeoPixelColor() function sets all the LEDs to the same color, used to visually indicate the status of the system, and blinkOrange(int blinkCount) is specifically designed to create a blinking orange alert.
 3. Buzzer: It emits an audible sound when activated. The function triggerAlarm(const char* message) uses the buzzer to create a repeating on-off sound pattern, serving as an auditory alarm during high vibration events.
 4. 0.96-inch OLED Display: This screen displays messages or information using the Adafruit SSD1306 library. The function displayMessageOnOled(const char* message, int textSize) is used to show text on the screen, such as alert messages or the current time.
-   
-![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/ed9fd12d-e2be-4942-8ccb-725f71bd3ffb)
-
 5. DS3231 Real Time Clock (RTC): This is used to keep track of the current time accurately. The time is displayed on the OLED and can be used in logging or timestamping events. The code checks if the RTC has lost power and resets the time if necessary.
 
 The code operates in a loop, continuously checking the vibration sensor. Depending on the vibration level (measurement), it triggers different responses:
