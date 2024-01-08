@@ -82,6 +82,7 @@ WiFi Module Addition: For immediate alerts and user connectivity.
 
 ## Conclusion
 This project aims to create a more prepared and safer environment in earthquake-prone areas. The stages of development and testing ensure a reliable and efficient system, capable of providing critical early warnings.
+
 ![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/32c6c729-3773-4868-a85f-f4ebba9409a6)
 
 
