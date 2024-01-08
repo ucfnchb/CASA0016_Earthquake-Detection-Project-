@@ -42,17 +42,21 @@ The Arduino connects to all components as described above and acts as the main h
 The DS3231 also uses I²C communication. Connect its SDA and SCL pins to the Arduino's SDA and SCL pins. Additionally, VCC goes to 5V, and GND to one of the Arduino's GND pins.
 7. Power Source
 Connections: The Arduino can be powered through its USB port or an external power supply. If using an external power supply, connect it to the Vin and GND pins of the Arduino.
-4th Stage: System Testing: 
+### 4th Stage: System Testing: 
 In final sketch, these libraries work together to create a system likely intended for detecting and alerting users of vibrations, possibly from earthquakes. The vibration sensor detects shakes or movements, the NeoPixel stick provides a visual alert, the buzzer gives an audible warning, the OLED display shows the status or messages, and the RTC keeps track of the current time for logging or scheduling purposes. Each component is initialized in the setup() function and utilized in the loop() and other functions according to the sensor inputs and programmed logic. Here's how each part works:
-Vibration Sensor (SW-420): The vibration sensor detects vibrations or movements. When the detected vibration exceeds certain thresholds, it triggers different levels of alerts. The function long vibration () reads the vibration intensity and returns it for further processing.
-Adafruit NeoPixel Stick: This is an 8-LED RGB strip, each LED of which can be controlled individually with the Adafruit NeoPixel library. In this code, the setNeoPixelColor() function sets all the LEDs to the same color, used to visually indicate the status of the system, and blinkOrange(int blinkCount) is specifically designed to create a blinking orange alert.
-Buzzer: It emits an audible sound when activated. The function triggerAlarm(const char* message) uses the buzzer to create a repeating on-off sound pattern, serving as an auditory alarm during high vibration events.
-0.96-inch OLED Display: This screen displays messages or information using the Adafruit SSD1306 library. The function displayMessageOnOled(const char* message, int textSize) is used to show text on the screen, such as alert messages or the current time.
-DS3231 Real Time Clock (RTC): This is used to keep track of the current time accurately. The time is displayed on the OLED and can be used in logging or timestamping events. The code checks if the RTC has lost power and resets the time if necessary.
+1. Vibration Sensor (SW-420): The vibration sensor detects vibrations or movements. When the detected vibration exceeds certain thresholds, it triggers different levels of alerts. The function long vibration () reads the vibration intensity and returns it for further processing.
+2. Adafruit NeoPixel Stick: This is an 8-LED RGB strip, each LED of which can be controlled individually with the Adafruit NeoPixel library. In this code, the setNeoPixelColor() function sets all the LEDs to the same color, used to visually indicate the status of the system, and blinkOrange(int blinkCount) is specifically designed to create a blinking orange alert.
+3. Buzzer: It emits an audible sound when activated. The function triggerAlarm(const char* message) uses the buzzer to create a repeating on-off sound pattern, serving as an auditory alarm during high vibration events.
+4. 0.96-inch OLED Display: This screen displays messages or information using the Adafruit SSD1306 library. The function displayMessageOnOled(const char* message, int textSize) is used to show text on the screen, such as alert messages or the current time.
+5. DS3231 Real Time Clock (RTC): This is used to keep track of the current time accurately. The time is displayed on the OLED and can be used in logging or timestamping events. The code checks if the RTC has lost power and resets the time if necessary.
+
 The code operates in a loop, continuously checking the vibration sensor. Depending on the vibration level (measurement), it triggers different responses:
 No significant vibration: The NeoPixel is set to green, and the current time is displayed on the OLED.
-Moderate vibration (measurement > 5000): A less urgent alert is triggered, causing the NeoPixels to blink orange using blinkOrange(5).
+
+Moderate vibration (measurement > 5000): A less urgent alert is triggered, causing the NeoPixels to blink yellow orange using blinkOrange(5).
+
 High vibration (measurement > 25000): This is treated as an emergency (e.g., potential earthquake). It triggers a more urgent alarm with triggerAlarm("Earthquake RUN!!!!!"), causing the buzzer to sound and NeoPixels to blink red while displaying a critical alert message on the OLED.
+
 By setting different thresholds for vibration levels, the system can differentiate between normal conditions, potential threats, or emergency situations, responding with appropriate visual and auditory cues.
 
 ### 5th Stage: Refinement
