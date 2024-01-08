@@ -7,12 +7,12 @@ The primary goal is to develop a prototype capable of detecting early warning si
 
 ## Working Progress
 ### 1st Stage: Device Design
-Display Mechanisms: Utilizes a 0.96-inch OLED display and an Adafruit NeoPixel Stick for seismic data presentation.
-Audio Output: Incorporates a buzzer for audible warnings.
-Power Source: Arduino Uno REV3.
-Seismic Detection: Employs the SW-420 Vibration Sensor.
-Timekeeping: Includes a DS3231 Real Time Clock for accurate event recording.
-Others: 400 breadboard, jumper wires.
+ Display Mechanisms: Utilizes a 0.96-inch OLED display and an Adafruit NeoPixel Stick for seismic data presentation.
+ Audio Output: Incorporates a buzzer for audible warnings.
+ Power Source: Arduino Uno REV3.
+ Seismic Detection: Employs the SW-420 Vibration Sensor.
+ Timekeeping: Includes a DS3231 Real Time Clock for accurate event recording.
+ Others: 400 breadboard, jumper wires.
 
 ### 2nd Stage: Prototype Design
 Development of a desk-sized, wooden house prototype.
