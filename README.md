@@ -58,14 +58,10 @@ In final sketch, these libraries work together to create a system likely intende
 2. Adafruit NeoPixel Stick: This is an 8-LED RGB strip, each LED of which can be controlled individually with the Adafruit NeoPixel library. In this code, the setNeoPixelColor() function sets all the LEDs to the same color, used to visually indicate the status of the system, and blinkOrange(int blinkCount) is specifically designed to create a blinking orange alert.
 3. Buzzer: It emits an audible sound when activated. The function triggerAlarm(const char* message) uses the buzzer to create a repeating on-off sound pattern, serving as an auditory alarm during high vibration events.
 4. 0.96-inch OLED Display: This screen displays messages or information using the Adafruit SSD1306 library. The function displayMessageOnOled(const char* message, int textSize) is used to show text on the screen, such as alert messages or the current time.
-   // OLED setup
-#define SCREEN_I2C_ADDR 0x3C // or 0x3D
-#define SCREEN_WIDTH 128     // OLED display width, in pixels
-#define SCREEN_HEIGHT 64     // OLED display height, in pixels
-#define OLED_RST_PIN -1      // Reset pin (-1 if not available)
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RST_PIN);
+   
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/ed9fd12d-e2be-4942-8ccb-725f71bd3ffb)
 
-6. DS3231 Real Time Clock (RTC): This is used to keep track of the current time accurately. The time is displayed on the OLED and can be used in logging or timestamping events. The code checks if the RTC has lost power and resets the time if necessary.
+5. DS3231 Real Time Clock (RTC): This is used to keep track of the current time accurately. The time is displayed on the OLED and can be used in logging or timestamping events. The code checks if the RTC has lost power and resets the time if necessary.
 
 The code operates in a loop, continuously checking the vibration sensor. Depending on the vibration level (measurement), it triggers different responses:
 No significant vibration: The NeoPixel is set to green, and the current time is displayed on the OLED.
@@ -75,6 +71,8 @@ Moderate vibration (measurement > 5000): A less urgent alert is triggered, causi
 High vibration (measurement > 25000): This is treated as an emergency (e.g., potential earthquake). It triggers a more urgent alarm with triggerAlarm("Earthquake RUN!!!!!"), causing the buzzer to sound and NeoPixels to blink red while displaying a critical alert message on the OLED.
 
 By setting different thresholds for vibration levels, the system can differentiate between normal conditions, potential threats, or emergency situations, responding with appropriate visual and auditory cues.
+
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/b705e6b8-abbb-47d6-b57b-570020ff8c63)
 
 ![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/74c28884-6920-4b3a-becb-842a6ca88a9c)
 
