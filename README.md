@@ -13,10 +13,14 @@ The primary goal is to develop a prototype capable of detecting early warning si
  Seismic Detection: Employs the SW-420 Vibration Sensor.
  Timekeeping: Includes a DS3231 Real Time Clock for accurate event recording.
  Others: 400 breadboard, jumper wires.
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/8b66269e-895a-41d4-971d-d24b2d29635c)
+
 
 ### 2nd Stage: Prototype Design
 Development of a desk-sized, wooden house prototype.
 Focus on portability, durability, and component accessibility.
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/0be8254c-543c-41aa-ac81-0bed3624124e)
+
 
 ### 3rd Stage: Circuit Design and Testing
 The project utilizes several libraries to interface with various hardware components. Here's an explanation of each library and its role in the project:
@@ -42,6 +46,12 @@ The Arduino connects to all components as described above and acts as the main h
 The DS3231 also uses I²C communication. Connect its SDA and SCL pins to the Arduino's SDA and SCL pins. Additionally, VCC goes to 5V, and GND to one of the Arduino's GND pins.
 7. Power Source
 Connections: The Arduino can be powered through its USB port or an external power supply. If using an external power supply, connect it to the Vin and GND pins of the Arduino.
+
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/950f548b-70d9-4a77-ba32-d8b3f092a441)
+
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/0dc98a3a-8623-4c60-8820-b90e1107357a)
+
+
 ### 4th Stage: System Testing: 
 In final sketch, these libraries work together to create a system likely intended for detecting and alerting users of vibrations, possibly from earthquakes. The vibration sensor detects shakes or movements, the NeoPixel stick provides a visual alert, the buzzer gives an audible warning, the OLED display shows the status or messages, and the RTC keeps track of the current time for logging or scheduling purposes. Each component is initialized in the setup() function and utilized in the loop() and other functions according to the sensor inputs and programmed logic. Here's how each part works:
 1. Vibration Sensor (SW-420): The vibration sensor detects vibrations or movements. When the detected vibration exceeds certain thresholds, it triggers different levels of alerts. The function long vibration () reads the vibration intensity and returns it for further processing.
@@ -59,6 +69,8 @@ High vibration (measurement > 25000): This is treated as an emergency (e.g., pot
 
 By setting different thresholds for vibration levels, the system can differentiate between normal conditions, potential threats, or emergency situations, responding with appropriate visual and auditory cues.
 
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/74c28884-6920-4b3a-becb-842a6ca88a9c)
+
 ### 5th Stage: Refinement
 Enhancement of the prototype's appearance and streamlining of code.
 Comprehensive documentation including schematics, code, and user manuals.
@@ -70,5 +82,6 @@ WiFi Module Addition: For immediate alerts and user connectivity.
 
 ## Conclusion
 This project aims to create a more prepared and safer environment in earthquake-prone areas. The stages of development and testing ensure a reliable and efficient system, capable of providing critical early warnings.
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/32c6c729-3773-4868-a85f-f4ebba9409a6)
 
 
