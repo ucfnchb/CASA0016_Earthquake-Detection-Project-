@@ -74,6 +74,7 @@ By setting different thresholds for vibration levels, the system can differentia
 ### 5th Stage: Refinement
 Enhancement of the prototype's appearance and streamlining of code.
 Comprehensive documentation including schematics, code, and user manuals.
+
 ![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/32c6c729-3773-4868-a85f-f4ebba9409a6)
 
 ## Feedback and Further Improvement
