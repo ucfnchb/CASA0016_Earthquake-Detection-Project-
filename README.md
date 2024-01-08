@@ -74,15 +74,16 @@ By setting different thresholds for vibration levels, the system can differentia
 ### 5th Stage: Refinement
 Enhancement of the prototype's appearance and streamlining of code.
 Comprehensive documentation including schematics, code, and user manuals.
+![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/32c6c729-3773-4868-a85f-f4ebba9409a6)
 
 ## Feedback and Further Improvement
-Stripboard Utilization: For stable connections and portability.
-Integration with Raspberry Shake: For enhanced earthquake detection accuracy.
-WiFi Module Addition: For immediate alerts and user connectivity.
+1. Stripboard Utilization: For stable connections and portability.
+2. Integration with Raspberry Shake: For enhanced earthquake detection accuracy.
+3. WiFi Module Addition: For immediate alerts and user connectivity.
 
 ## Conclusion
 This project aims to create a more prepared and safer environment in earthquake-prone areas. The stages of development and testing ensure a reliable and efficient system, capable of providing critical early warnings.
 
-![image](https://github.com/ucfnchb/CASA0016_Earthquake-Detection-Project-/assets/146333771/32c6c729-3773-4868-a85f-f4ebba9409a6)
+
 
 
